@@ -39,8 +39,11 @@ class MyArrayListTests {
         list.add("사과");
         list.add("포도");
 
-        assertThat(list.get(0)).isEqualTo("사과");
-        assertThat(list.get(1)).isEqualTo("포도");
+        String e0 = (String) list.get(0);
+        String e1 = (String) list.get(1);
+
+        assertThat(e0).isEqualTo("사과");
+        assertThat(e1).isEqualTo("포도");
     }
     @Test
     @DisplayName("data(배열)의 크기가 자동으로 늘어나야 한다.")
@@ -113,6 +116,20 @@ class MyArrayListTests {
         list.add(false);
 
         assertThat(list.size()).isEqualTo(2);
+    }
+    @Test
+    @DisplayName("get(1)")
+    void t10() {
+        MyArrayList<Boolean> list = new MyArrayList<>();
+
+        list.add(true);
+        list.add(false);
+
+        boolean e0 = (boolean) list.get(0);
+        boolean e1 = (boolean) list.get(1);
+
+        assertThat(e0).isEqualTo(true);
+        assertThat(e1).isEqualTo(false);
     }
 
 }
