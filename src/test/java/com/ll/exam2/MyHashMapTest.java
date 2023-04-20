@@ -112,5 +112,17 @@ class MyHashMapTest {
                 map.containsValue(24)
         ).isFalse();
     }
+    @Test
+    @DisplayName("clear")
+    void t09() {
+        MyHashMap<String, Integer> map = new MyHashMap<>();
+
+        map.put("철수", 22);
+        map.put("영희", 23);
+        map.clear();
+
+        assertThat(map.size()).isEqualTo(0);
+        assertThat(map.isEmpty()).isTrue();
+    }
 
 }
