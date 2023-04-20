@@ -17,7 +17,7 @@ public class MyArrayList<T> {
         return size;
     }
 
-    public boolean add(Object element) {
+    public boolean add(T element) {
         makeNewDataIfNotEnough();
         data[size] = element;
         size++;
